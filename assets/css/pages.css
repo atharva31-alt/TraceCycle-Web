@@ -1,0 +1,31 @@
+/* Page specific pieces: home hero, streams, role cards, passport. */
+
+/* hero */
+.notice-strip { background: var(--saffron-soft); border-bottom: 1px solid var(--line); }
+.notice-strip .page { display: flex; flex-wrap: wrap; gap: 10px; align-items: baseline; padding-top: 9px; padding-bottom: 9px; font-size: .9rem; color: var(--saffron-ink); }
+.notice-strip b { background: var(--saffron-ink); color: var(--bg); font-size: .75rem; padding: 1px 8px; border-radius: 3px; }
+.hero { background: var(--surface); border-bottom: 1px solid var(--line); }
+.hero .page { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; padding-top: 48px; padding-bottom: 48px; }
+.hero h1 { font-size: 2.3rem; margin-bottom: 14px; }
+.hero p.lead { font-size: 1.1rem; color: var(--ink-soft); max-width: 34em; margin-bottom: 26px; }
+.streams { display: grid; gap: 16px; } @media (min-width: 640px) { .streams { grid-template-columns: repeat(2, minmax(0, 1fr)); } } @media (min-width: 1000px) { .streams { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; } @media (min-width: 900px) { .steps { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.roles { display: grid; gap: 12px; } @media (min-width: 640px) { .roles { grid-template-columns: repeat(2, minmax(0, 1fr)); } } @media (min-width: 1000px) { .roles { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.role-card { text-align: left; padding: 16px; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface); cursor: pointer; }
+.role-card:hover { border-color: var(--navy); }
+.role-card b { display: block; color: var(--link); } .role-card span { display: block; font-size: .85rem; color: var(--ink-soft); margin-top: 4px; }
+
+/* passport */
+.stamp { width: 50px; height: 50px; flex: 0 0 auto; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--card); border: 3px double; }
+.tl-line { width: 2px; flex: 1; min-height: 18px; background: var(--line-strong); }
+.seal { border: 2px solid; border-radius: 4px; padding: 18px; }
+.seal.ok { border-color: var(--leaf); background: var(--leaf-soft); color: var(--leaf-ink); }
+.seal.bad { border-color: var(--danger); background: var(--danger-soft); color: var(--danger-ink); }
+.qr svg { display: block; width: 132px; height: 132px; background: #fff; border: 1px solid var(--line); padding: 4px; }
+
+
+.about section { scroll-margin-top: 16px; }
+
+.role-card { cursor: pointer; font: inherit; color: inherit; }
+.role-card:disabled { cursor: default; }
+.role-go { margin-top: 8px; font-weight: 600; color: var(--link) !important; }

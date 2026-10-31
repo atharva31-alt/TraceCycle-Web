@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="TraceCycle: traceable waste collection and verified recovery for a gram panchayat. Prototype with synthetic data.">
+  <meta name="theme-color" content="#1A3A6B">
+  <!-- Always white: opt out of browser auto dark mode and dark-mode extensions -->
+  <meta name="color-scheme" content="only light">
+  <meta name="darkreader-lock">
+  <title>TraceCycle</title>
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261031h">
+  <link rel="stylesheet" href="assets/css/layout.css?v=20261031h">
+  <link rel="stylesheet" href="assets/css/components.css?v=20261031h">
+  <link rel="stylesheet" href="assets/css/pages.css?v=20261031h">
+</head>
+<body>
+  <div id="app">
+    <div class="boot" role="status"><span class="boot-spin" aria-hidden="true"></span><span>Loading TraceCycle… / लोड हो रहा है…</span></div>
+    <noscript><p style="padding:24px">TraceCycle needs JavaScript turned on.</p></noscript>
+  </div>
+  <dialog id="dlg" aria-labelledby="dlg-title"></dialog>
+  <div id="toasts" aria-live="polite"></div>
+
+  <!-- QR codes. Without internet the app still works and shows the batch ID instead. -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+
+  <!-- Plain scripts in this order. No build step, so it runs from Live Server or a double click. -->
+  <script src="js/data/translations.js?v=20261031h"></script>
+  <script src="js/core/state.js?v=20261031h"></script>
+  <script src="js/core/hash.js?v=20261031h"></script>
+  <script src="js/core/geo.js?v=20261031h"></script>
+  <script src="js/services/lifecycle.js?v=20261031h"></script>
+  <script src="js/data/seed.js?v=20261031h"></script>
+  <script src="js/services/analytics.js?v=20261031h"></script>
+  <script src="js/services/rewards.js?v=20261031h"></script>
+  <script src="js/services/voice.js?v=20261031h"></script>
+  <script src="js/services/ai.js?v=20261031h"></script>
+  <script src="js/services/quality.js?v=20261031h"></script>
+  <script src="js/services/forecast.js?v=20261031h"></script>
+  <script src="js/services/impact.js?v=20261031h"></script>
+  <script src="js/services/offline.js?v=20261031h"></script>
+  <script src="js/services/tracking.js?v=20261031h"></script>
+  <script src="js/services/dispatch.js?v=20261031h"></script>
+  <script src="js/services/assistant.js?v=20261031h"></script>
+  <script src="js/ui/components.js?v=20261031h"></script>
+  <script src="js/ui/map.js?v=20261031h"></script>
+  <script src="js/ui/layout.js?v=20261031h"></script>
+  <script src="js/ui/dialogs.js?v=20261031h"></script>
+  <script src="js/ui/scanner.js?v=20261031h"></script>
+  <script src="js/pages/home.js?v=20261031h"></script>
+  <script src="js/pages/login.js?v=20261031h"></script>
+  <script src="js/pages/about.js?v=20261031h"></script>
+  <script src="js/pages/household.js?v=20261031h"></script>
+  <script src="js/pages/book.js?v=20261031h"></script>
+  <script src="js/pages/collector.js?v=20261031h"></script>
+  <script src="js/pages/handoff.js?v=20261031h"></script>
+  <script src="js/pages/passport.js?v=20261031h"></script>
+  <script src="js/pages/track.js?v=20261031h"></script>
+  <script src="js/pages/notifications.js?v=20261031h"></script>
+  <script src="js/pages/admin.js?v=20261031h"></script>
+  <script src="js/pages/flags.js?v=20261031h"></script>
+  <script src="js/pages/demo.js?v=20261031h"></script>
+  <script src="js/pages/rewards.js?v=20261031h"></script>
+  <script src="js/pages/wards.js?v=20261031h"></script>
+  <script src="js/pages/people.js?v=20261031h"></script>
+  <script src="js/pages/audit.js?v=20261031h"></script>
+  <script src="js/pages/settings.js?v=20261031h"></script>
+  <script src="js/pages/insights.js?v=20261031h"></script>
+  <script src="js/pages/features.js?v=20261031h"></script>
+  <script src="js/app/router.js?v=20261031h"></script>
+  <script src="js/app/main.js?v=20261031h"></script>
+</body>
+</html>

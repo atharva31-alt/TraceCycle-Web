@@ -1,0 +1,36 @@
+/* Design tokens (light and dark), reset and global rules. Colours follow an Indian government portal style. */
+
+:root {
+  --navy: #1A3A6B; --navy-deep: #0F2547; --navy-line: #5A6F95;
+  --saffron: #E8772E; --leaf: #1F7A3D; --danger: #B42318;
+  --bg: #FFFFFF; --card: #FFFFFF; --surface: #F3F5F8; --zebra: #F7F8FA;
+  --ink: #1C2430; --ink-soft: #3A4556; --muted: #4A5565; --heading: #0F2547; --link: #1A3A6B;
+  --line: #D9DEE7; --line-strong: #C9D1DE; --input-line: #8A95A8;
+  --navy-soft: #E4ECF7; --navy-text: #0F2547;
+  --saffron-soft: #FDEBDC; --saffron-ink: #5C2A08;
+  --leaf-soft: #E3F1E7; --leaf-ink: #14532B;
+  --danger-soft: #FBE4E1; --danger-ink: #8C1D13;
+  --neutral-soft: #ECEEF2;
+  --map-bg: #4F6B3E; --map-field: #6E8A4F; --map-road: #D8C9A3; --map-water: #3E6F8E; --map-edge: #8C7A55;
+  --font-size: 100%;
+  color-scheme: only light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+html { background: #FFFFFF; font-size: var(--font-size); scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Noto Sans", "Noto Sans Devanagari", system-ui, sans-serif; line-height: 1.6; }
+h1, h2, h3 { color: var(--heading); font-weight: 600; line-height: 1.25; margin: 0; }
+h1 { font-size: 1.9rem; } h2 { font-size: 1.2rem; } h3 { font-size: 1rem; }
+p { margin: 0; }
+a { color: var(--link); text-underline-offset: 2px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+.page { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 640px) { .page { padding: 0 24px; } }
+
+html.contrast body *:not(svg):not(svg *):not(.qr *) { background-color: #000 !important; color: #FFEB3B !important; border-color: #FFEB3B !important; }
+@media print { .no-print { display: none !important; } }
